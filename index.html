@@ -17,6 +17,21 @@
           font-family: "Roboto", serif;
 
         }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.7; }
+        }
+        .animate-pulse-custom {
+            animation: pulse 1.5s infinite;
+        }
+        
     </style>
 </head>
 <body class="roboto">
@@ -53,10 +68,10 @@
 <div class="hero min-h-screen bg-base-200">
     <div class="hero-content text-center">
       <div class="max-w-md">
-        <img class="mask mask-hexagon w-56 mx-auto w-md" src="./assets/hero.jpg" alt="">
-        <h1 class="text-5xl font-bold">Hello! <br> I am Mobashsherul</h1>
+        <img class="mask mask-hexagon w-56 mx-auto w-md transition-transform duration-300 ease-in-out transform hover:scale-110 animate-float" src="./assets/hero.jpg" alt="">
+        <h1 class="text-5xl font-bold ">Hello! <br> I am Mobashsherul</h1>
         <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-        <button class="btn btn-primary">Get Started</button>
+        <button class="btn btn-primary transition duration-300 ease-in-out transform hover:scale-110 active:scale-95 hover:bg-blue-700 animate-pulse-custom">Get Started</button>
       </div>
     </div>
   </div>
